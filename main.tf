@@ -1,7 +1,7 @@
 resource "aws_db_instance" "default" {
   username                  = var.db_user
   password                  = var.db_password
-  vpc_security_group_ids    = local.security_groups
+  vpc_security_group_ids    = var.security_group_ids
   allocated_storage         = var.allocated
   max_allocated_storage     = var.max_allocated
   storage_type              = "gp3"
