@@ -36,8 +36,8 @@ variable "apply_immediately" {
 # Variable for security group IDs
 variable "security_group_ids" {
   description = "Comma-separated list of security group IDs"
-  type        = string
-  default     = "sg-12345678,sg-87654321"
+  type        = list(string)
+  default     = ["sg-12345678","sg-87654321"]
 }
 
 # Local variable to split the security group IDs
