@@ -41,6 +41,6 @@ variable "security_group_ids" {
 }
 
 # Local variable to split the security group IDs
-locals {
-  security_groups = split(",", var.security_group_ids)
-}
+#locals {
+#  security_groups = split(",", var.security_group_ids)
+#}
