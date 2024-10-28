@@ -3,5 +3,5 @@ output "rds_endpoint" {
 }
 
 output "vpc_security_group_ids" {
-  value = var.security_group_ids
+  value = local.security_groups
 }
