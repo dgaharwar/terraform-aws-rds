@@ -37,15 +37,10 @@ variable "apply_immediately" {
 variable "security_group_ids" {
   description = "Comma-separated list of security group IDs"
   type        = string
-  default     = "[{\"id\":\"sg-12345678\"},{\"id\":\"sg-87654321\"}]"
-}
-
-# Local variable to transform the security group IDs
-locals {
-  security_groups = [for sg in jsondecode(var.security_group_ids) : sg.id]
+  default     = "sg-12345678,sg-87654321"
 }
 
 # Local variable to split the security group IDs
-#locals {
-#  security_groups = split(",", var.security_group_ids)
-#}
+locals {
+  security_groups = split(",", var.security_group_ids)
+}
