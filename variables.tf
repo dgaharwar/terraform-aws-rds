@@ -14,7 +14,7 @@ variable "max_allocated" {
 
 variable "engine_version" {
     description = "Version of the RDS Engine"
-    default     = "5.7"
+    default     = "8.0.39"
 }
 
 variable "db_user" {
