@@ -25,7 +25,7 @@ variable "db_user" {
 variable "db_password" {
     description = "DB Password"
     sensitive   = true
-    default     = "<%=cypher.read('secret/rds')%>"
+    default     = "Password123?"
 }
 
 variable "apply_immediately" {
